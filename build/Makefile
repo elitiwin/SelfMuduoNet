@@ -2,7 +2,7 @@
 # 程序名
 BIN = pro
 # 程序依赖object文件，与src目录下的.cc文件同名
-OBJ = main.o
+OBJ = main.o Hello.o
 
 AR = ar
 AR_FLAGS = crs

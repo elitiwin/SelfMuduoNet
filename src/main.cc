@@ -4,6 +4,7 @@
 #include <muduo/net/EventLoop.h>
 #include <muduo/net/TcpClient.h>
 #include <muduo/other/circular_buffer.h>
+#include "Hello.h"  //自己写的头文件
 
 #include <functional>
 
@@ -29,6 +30,7 @@ int main(int argc, char* argv[])
 //  client.connect();
 //  CurrentThread::sleepUsec(100 * 1000);
 //  loop.loop();
+	//使用muduo库
 	muduo::circular_buffer<int> bullet(5);
 	for(int i = 0 ; i < 5;i++)
 	{
@@ -39,6 +41,7 @@ int main(int argc, char* argv[])
 	{
 		printf("%d\n",bullet[i]);
 	}
-
-
+	//使用自己的函数
+	printHello();
+	return 0;
 }
